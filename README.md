@@ -2,7 +2,7 @@
 
 Update your Slack status every 30 minutes, using Github Actions and the Dark Sky API.    
 
-<img src='https://github.com/br-g/slack_weather_4/blob/master/screenshot.png' alt='screenshot' width='230'/>
+<img src='https://github.com/br-g/slack-weather/blob/master/screenshot.png' alt='screenshot' width='230'/>
 
 ## Setup
 
@@ -10,7 +10,7 @@ Update your Slack status every 30 minutes, using Github Actions and the Dark Sky
 
 #### 2) Set parameters
 
-Open `https://github.com/<MY_GITHUB_ID>/slack_weather/settings/secrets` (replace `<MY_GITHUB_ID>`).   
+Open `https://github.com/<MY_GITHUB_ID>/slack-weather/settings/secrets` (replace `<MY_GITHUB_ID>`).   
 Add the following secrets:
 
 | Name            | Value                                                                                               |
@@ -23,7 +23,7 @@ Add the following secrets:
 
 #### 3) Enable actions
 
-Open `https://github.com/<MY_GITHUB_ID>/slack_weather/actions`(replace `<MY_GITHUB_ID>`).   
+Open `https://github.com/<MY_GITHUB_ID>/slack-weather/actions`(replace `<MY_GITHUB_ID>`).   
 Click the green button "I understand my workflows, go ahead and run them".
 
 #### 4) Push something to the master branch
@@ -36,4 +36,4 @@ This is a necessary step for triggering the actions.
 
 An execution of the Github action takes about 10 seconds.    
 With 2 executions per hour (the default value), this adds up to 250 minutes per month.    
-As of January 2020, GitHub Free and GitHub Pro have respectively 2000 and 3000 minutes free.
+As of January 2020, GitHub Free and GitHub Pro provide respectively 2000 and 3000 minutes free.
