@@ -6,6 +6,7 @@ Update your Slack status every 30 minutes, using Github Actions and the Dark Sky
 
 ## Setup
 
+
 #### 1) Fork this repository
 
 #### 2) Set parameters
