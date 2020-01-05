@@ -1,0 +1,29 @@
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron:  '*/30 * * * *'
+
+name: Status update
+
+jobs:
+  run:
+    name: Install and run
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-python@v1
+      with:
+        python-version: '3.6.9'
+        architecture: 'x64'
+    - run: |
+        pip3 install -r requirements.txt
+        python3 update_weather.py
+      env:
+        SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
+        DARKSKY_TOKEN: ${{ secrets.DARKSKY_TOKEN }}
+        LATITUDE: ${{ secrets.LATITUDE }}
+        LONGITUDE: ${{ secrets.LONGITUDE }}
+        UNITS: ${{ secrets.UNITS }}
